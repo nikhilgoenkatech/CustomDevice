@@ -1,0 +1,28 @@
+{
+  "tenant-details":
+   {
+     "tenant-URL"  : "https://95acfbb7-bd60-433e-9332-36098e101b45-2.managed.internal.dynatrace.com:8021/e/5a9ef1b3-f700-46f4-afd4-718ab3ce10ae/api/v1/",
+     "API-GET-token"   : "GET_TOKEN",
+     "API-POST-token"  : "POST_TOKEN"
+   },
+   "application-name":
+   [
+     {
+       "app-name":"SIA",
+       "use-case":
+       [
+         {
+            "api"  : "SELECT COUNT(*) FROM usersession WHERE useraction.application=\"SIA MSL iOS - PROD Amadeus\" AND appVersion=\"22.6.0\"",
+            "displayname":"Total usersessions using version 22.6",
+            "timeseriesId":"custom:usersessions.appVersion"
+         },
+         {
+            "api"  : "SELECT COUNT(usersession.userId) FROM useraction WHERE useraction.application=\"SIA MSL iOS - PROD Amadeus\" AND usersession.appVersion=\"22.6.0\" AND useraction.name IN (\"Touch on LOG IN\")  AND useraction.duration > 60",
+            "displayname":"Total users who logged in",
+            "timeseriesId":"custom:users.login"
+         }
+       ]
+    }
+  ],
+  "log_file": "usql_restore_dynatrace.log"
+}
