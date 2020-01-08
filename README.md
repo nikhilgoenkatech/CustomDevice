@@ -1,3 +1,5 @@
+Please note this is not officially supported in Dynatrace or part of Dynatrace solution.
+
 Pre-requisite:
 For the script to run successfully, you would need Python 2.7 running on the server as well as python-pip and pycurl package. You can install pycurl using the following command: sudo apt install python-pycurl and pip using: apt-get python-pip. 
 Next steps:
